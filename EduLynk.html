@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduLynk One	</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f172a;
+      color: #f1f5f9;
+      position: relative;
+      overflow-x: hidden;
+    }
+    .text-gradient {
+      background: linear-gradient(90deg, #38bdf8, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .chart-container {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 400px;
+      max-height: 400px;
+    }
+    .bg-white {
+      background-color: #1e293b !important;
+    }
+    .text-gray-600 {
+      color: #94a3b8 !important;
+    }
+    .text-gray-800 {
+      color: #e2e8f0 !important;
+    }
+    .border-blue-500 {
+      border-color: #3b82f6 !important;
+    }
+    .border-blue-300 {
+      border-color: #60a5fa !important;
+    }
+    .shadow-lg {
+      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2) !important;
+    }
+    .svg-bg {
+      position: fixed;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      opacity: 0.05;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='1000' height='1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233b82f6' fill-opacity='0.2'%3E%3Ccircle cx='100' cy='100' r='20'%3E%3Canimate attributeName='cy' values='100;300;100' dur='10s' repeatCount='indefinite' /%3E%3C/circle%3E%3Ccircle cx='400' cy='300' r='40'%3E%3Canimate attributeName='cx' values='400;600;400' dur='8s' repeatCount='indefinite' /%3E%3C/circle%3E%3Ccircle cx='700' cy='500' r='30'%3E%3Canimate attributeName='r' values='30;60;30' dur='12s' repeatCount='indefinite' /%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+      background-repeat: repeat;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+  <div class="svg-bg"></div>
+
+  <div class="relative z-10 container mx-auto px-4 md:px-8 py-12">
+<header class="text-center mb-20" data-aos="fade-down">
+  <!-- CampusOne Logo -->
+  <div class="flex justify-center items-center mb-6">
+    <div class="flex items-center space-x-3">
+      <!-- Icon -->
+      <div class="bg-gradient-to-tr from-blue-500 to-cyan-400 w-12 h-12 rounded-xl flex items-center justify-center shadow-lg">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 14l9-5-9-5-9 5 9 5z" />
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.75a12.083 12.083 0 01-6.16-11.172L12 14z" />
+        </svg>
+      </div>
+      <!-- Text -->
+      <h1 class="text-3xl font-extrabold text-gradient">EduLynk One</h1>
+    </div>
+  </div>
+
+  <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+    A proposal for a unified Student Management System (SMS) to streamline administration, enhance learning, and create a fully integrated digital ecosystem for all degree colleges.
+  </p>
+
+  <!-- Spacing + Button -->
+  <div class="mt-8">
+    <a href="EduLynk One.html" class="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition duration-300">
+      View Prototype
+    </a>
+  </div>
+</header>
+
+
+    <!-- MODULES SECTION -->
+    <section id="modules" class="mb-20" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-center mb-12">Core System Modules</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500 transition-transform duration-300 hover:scale-105" data-aos="fade-up">
+          <h3 class="text-xl font-bold mb-3">Student Information System (SIS)</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10148;</span> Comprehensive Student Profiles</li>
+            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10148;</span> Digital ID Card Generation</li>
+            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10148;</span> Certificate Management</li>
+            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10148;</span> Alumni Portal</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500 transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-bold mb-3">Admission Management</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10148;</span> Online Application Portal</li>
+            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10148;</span> Real-time Status Tracking</li>
+            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10148;</span> Automated Merit List Generation</li>
+            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10148;</span> OAMDC Integration</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500 transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-bold mb-3">Academic Management</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>Course & Batch Management</li>
+            <li>Automated Timetables</li>
+            <li>Biometric Attendance Tracking</li>
+            <li>E-Learning Integration</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500 transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="text-xl font-bold mb-3">Examination & Results</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>Online Exam Scheduling</li>
+            <li>Automated Hall Tickets</li>
+            <li>Secure Result Publication</li>
+            <li>Gradebook Generation</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500 transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="400">
+          <h3 class="text-xl font-bold mb-3">Fee Management</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>Customizable Fee Structures</li>
+            <li>Online Fee Collection (UPI, etc.)</li>
+            <li>Automated Payment Reminders</li>
+            <li>Scholarship Management</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500 transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="500">
+          <h3 class="text-xl font-bold mb-3">Communication & Collaboration</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>Internal Messaging System</li>
+            <li>Digital Notice Board</li>
+            <li>Dedicated Parent Portal</li>
+            <li>Grievance Redressal</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJECTIVES -->
+    <section id="objectives" class="mb-20" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-center mb-12">Key Project Objectives</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
+        <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 hover:shadow-xl" data-aos="zoom-in">
+          <span class="text-4xl">🗃️</span>
+          <h3 class="text-lg font-semibold mt-2">Centralized Data</h3>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 hover:shadow-xl" data-aos="zoom-in" data-aos-delay="100">
+          <span class="text-4xl">✅</span>
+          <h3 class="text-lg font-semibold mt-2">Streamlined Admissions</h3>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 hover:shadow-xl" data-aos="zoom-in" data-aos-delay="200">
+          <span class="text-4xl">💬</span>
+          <h3 class="text-lg font-semibold mt-2">Enhanced Communication</h3>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 hover:shadow-xl" data-aos="zoom-in" data-aos-delay="300">
+          <span class="text-4xl">📈</span>
+          <h3 class="text-lg font-semibold mt-2">Improved Academics</h3>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 hover:shadow-xl" data-aos="zoom-in" data-aos-delay="400">
+          <span class="text-4xl">💡</span>
+          <h3 class="text-lg font-semibold mt-2">Data-Driven Decisions</h3>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 hover:shadow-xl" data-aos="zoom-in" data-aos-delay="500">
+          <span class="text-4xl">📋</span>
+          <h3 class="text-lg font-semibold mt-2">Compliance & Reporting</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section id="roadmap" class="mb-20" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-center mb-12">12-Month Implementation Roadmap</h2>
+      <div class="relative">
+        <div class="hidden md:block border-t-4 border-blue-300 border-dashed absolute w-full top-1/2 -translate-y-1/2"></div>
+        <div class="flex flex-col md:flex-row justify-between items-center text-center relative">
+          <div class="flex-1 mb-8 md:mb-0" data-aos="zoom-in">
+            <div class="bg-blue-500 text-white w-20 h-20 rounded-full mx-auto flex items-center justify-center text-2xl font-bold mb-3 border-4 border-white shadow-lg">1</div>
+            <h3 class="font-bold text-lg">Phase 1 (3–6 Mos)</h3>
+            <p class="text-sm text-gray-600">Core System Foundation & Pilot Launch</p>
+          </div>
+          <div class="flex-1 mb-8 md:mb-0" data-aos="zoom-in" data-aos-delay="100">
+            <div class="bg-blue-600 text-white w-20 h-20 rounded-full mx-auto flex items-center justify-center text-2xl font-bold mb-3 border-4 border-white shadow-lg">2</div>
+            <h3 class="font-bold text-lg">Phase 2 (6–9 Mos)</h3>
+            <p class="text-sm text-gray-600">Academic Expansion & State-wide Rollout</p>
+          </div>
+          <div class="flex-1" data-aos="zoom-in" data-aos-delay="200">
+            <div class="bg-blue-700 text-white w-20 h-20 rounded-full mx-auto flex items-center justify-center text-2xl font-bold mb-3 border-4 border-white shadow-lg">3</div>
+            <h3 class="font-bold text-lg">Phase 3 (9–12 Mos)</h3>
+            <p class="text-sm text-gray-600">Enhancements & Full Integration</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section id="tech-stack" class="mb-20" data-aos="fade-up">
+      <div class="bg-white rounded-xl shadow-lg p-8 md:p-12">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div data-aos="fade-right">
+            <h2 class="text-3xl font-bold mb-4">Modern & Scalable Technology</h2>
+            <p class="text-gray-600 mb-4">The system will be built using a robust and reliable technology stack to ensure performance, security, and scalability for the future.</p>
+            <ul class="space-y-2">
+              <li class="flex items-center"><span class="w-3 h-3 rounded-full bg-blue-500 mr-3"></span>Frontend: React.js / Angular</li>
+              <li class="flex items-center"><span class="w-3 h-3 rounded-full bg-teal-400 mr-3"></span>Backend: Node.js / Python</li>
+              <li class="flex items-center"><span class="w-3 h-3 rounded-full bg-yellow-500 mr-3"></span>Database: PostgreSQL / MySQL</li>
+              <li class="flex items-center"><span class="w-3 h-3 rounded-full bg-purple-500 mr-3"></span>Mobile App: React Native / Flutter</li>
+              <li class="flex items-center"><span class="w-3 h-3 rounded-full bg-orange-500 mr-3"></span>Cloud: AWS / Azure</li>
+            </ul>
+          </div>
+          <div class="chart-container" data-aos="fade-left">
+            <canvas id="techStackChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center border-t pt-8 border-blue-300" data-aos="fade-in">
+      <p class="text-gray-600">This initiative represents a significant step towards a digitally empowered future for higher education in Andhra Pradesh.</p>
+       <p>© 2025 EduLynk One. Connecting Institutions with Intelligence.</p>
+    </footer>
+  </div>
+   <footer class="text-center pt-12 border-t mt-20 text-gray-500" data-aos="fade-in">
+     
+    </footer>
+
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    const techStackCtx = document.getElementById('techStackChart').getContext('2d');
+    new Chart(techStackCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Frontend', 'Backend', 'Database', 'Mobile App', 'Cloud', 'Analytics'],
+        datasets: [{
+          data: [20, 20, 15, 20, 15, 10],
+          backgroundColor: ['#38bdf8', '#3b82f6', '#6366f1', '#0ea5e9', '#06b6d4', '#8b5cf6'],
+          borderColor: '#0f172a',
+          borderWidth: 4,
+          hoverBorderWidth: 6,
+          hoverOffset: 8
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '60%',
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              title: function (tooltipItems) {
+                const item = tooltipItems[0];
+                return item.chart.data.labels[item.dataIndex];
+              },
+              label: function (context) {
+                return ` Allocation: ${context.parsed}%`;
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
